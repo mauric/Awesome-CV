@@ -600,11 +600,12 @@
     \end{tabular*}
   \end{center}
 }
-% Define a line of cv information(skill)
+% Define a line of cv informatiosdn(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
 	\skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
+
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
@@ -645,12 +646,17 @@
   \vspace{8.4mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \recipienttitlestyle{\@recipientname} & \letterdatestyle{\@letterdate}
-  \end{tabular*}
-  \begin{singlespace}
-    \recipientaddressstyle{\@recipientaddress} \\\\
-  \end{singlespace}
+%  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} R{\textwidth - 4.5cm} R{4.5cm}}
+%  	\letterdatestyle{\@letterdate}\\
+%    \recipienttitlestyle{\@recipientname}  
+%  \end{tabular*}
+%  \begin{singlespace}
+%  	\begin{flushright}
+%	\letterdatestyle{\@letterdate}\\
+%	\recipienttitlestyle{\@recipientname} \\ 
+%  	\recipientaddressstyle{\@recipientaddress} \\\\	
+%  	\end{flushright}
+%  \end{singlespace}
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
     {\lettertitlestyle{\@lettertitle} \\}
